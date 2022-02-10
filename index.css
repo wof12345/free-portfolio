@@ -16,12 +16,19 @@ a:hover {
 }
 
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 20px 0;
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+}
+
+header:hover,
+section:hover {
+  box-shadow: 2px 1px 2px 3px rgba(0, 0, 0, 0.26);
 }
 
 .logo {
@@ -37,18 +44,124 @@ nav {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-width: 250px;
+  padding: 10px;
   min-height: 400px;
-  background-color: aquamarine;
+  background-color: rgba(127, 255, 212, 0);
   margin: 30px 0;
 }
 
+.inner_cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+  max-width: 900px;
+  margin: 30px 0;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.inner_cont:hover {
+  border: 1px solid rgba(0, 0, 0, 0.322);
+}
+
+.inner_cont > img {
+  max-width: 300px;
+  border-radius: 160px;
+}
+
+.inner_cont > * {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.233);
-  padding: 20px;
+  padding: 4px;
+}
+
+p::first-letter {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.progress_bar_cont {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-width: 200px;
+  height: 30px;
+  border-radius: 60px;
+  border: 1px solid black;
+}
+
+.progress_bar {
+  width: 50%;
+  height: 32px;
+  background-color: rgba(255, 0, 0, 0.445);
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.project_container {
+  min-width: 200px;
+  min-height: 200px;
+  margin: 20px 0;
+}
+
+.project_container:hover {
+  cursor: pointer;
+  background-color: rgba(148, 152, 155, 0.13);
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+}
+
+.project > img {
+  max-width: 400px;
+}
+
+.contact_container {
+  width: 100%;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.contact:hover {
+  cursor: pointer;
+  background-color: rgba(206, 202, 202, 0.315);
 }
 
 footer > nav {
   max-width: 200px;
   margin: auto;
+  margin: 9px;
 }
