@@ -1,9 +1,11 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Syne Mono", monospace;
   transition: 0.5s;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -18,7 +20,9 @@ article {
 }
 
 a:hover {
-  border-bottom: 1px solid rgb(0, 0, 0);
+  background-color: rgba(169, 198, 223, 0.781);
+  padding: 3px;
+  border-radius: 6px;
 }
 
 header {
@@ -29,17 +33,10 @@ header {
   align-items: center;
   padding: 20px 0;
   background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
 }
 
-header:hover,
-section:hover {
-  box-shadow: 2px 1px 2px 3px rgba(0, 0, 0, 0.26);
-}
-
-.logo {
-  margin-left: 4px;
-  text-align: center;
+header:hover {
+  box-shadow: 2px 2px 2px rgba(78, 78, 78, 0.24);
 }
 
 nav {
@@ -59,11 +56,41 @@ section {
   min-height: 400px;
   background-color: rgba(127, 255, 212, 0);
   margin: 30px 0;
+  background-color: black;
+}
+
+section:hover {
+  background-color: rgba(240, 248, 255, 0);
 }
 
 h1 {
   margin-bottom: 5rem;
   width: 100%;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.logo {
+  margin-left: 4px;
+  text-align: center;
+  border: 1px solid rgb(185, 184, 184);
+  border-radius: 10px;
+  padding: 9px;
+}
+
+.logo > * {
+  text-align: center;
+}
+
+.logo_under_text {
+  font-size: 12px;
 }
 
 .inner_cont {
@@ -77,10 +104,6 @@ h1 {
   border: 1px solid rgba(0, 0, 0, 0);
   padding: 10px;
   border-radius: 10px;
-}
-
-.inner_cont:hover {
-  border: 1px solid rgba(0, 0, 0, 0.322);
 }
 
 .inner_cont > img {
@@ -108,22 +131,29 @@ p::first-letter {
   font-size: 20px;
 }
 
+.skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .progress_bar_cont {
   display: flex;
   align-items: center;
-
   width: 100%;
   min-width: 200px;
   height: 20px;
   border-radius: 60px;
   border: 0.5px solid black;
   overflow: hidden;
+  margin: 0 4px;
 }
 
 .progress_bar {
   width: 50%;
   height: 32px;
-  background-color: rgba(69, 133, 56, 0.315);
+  background-color: rgb(5, 5, 5);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -131,14 +161,27 @@ p::first-letter {
   border-radius: 60px;
 }
 
+._skill_cont:first-child .progress_bar {
+  width: 100%;
+}
+
+._skill_cont:nth-child(2) .progress_bar {
+  width: 80%;
+}
+._skill_cont:nth-child(3) .progress_bar {
+  width: 20%;
+}
+
 .project_container {
   min-width: 200px;
   min-height: 200px;
   margin: 20px 0;
+  width: 0%;
 }
 
 .project_container:hover {
   cursor: pointer;
+  width: 100%;
   background-color: rgba(148, 152, 155, 0.13);
 }
 
@@ -161,7 +204,7 @@ p::first-letter {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 10px 0;
   line-height: 20px;
   letter-spacing: 2px;
