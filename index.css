@@ -39,6 +39,12 @@ header:hover {
   box-shadow: 2px 2px 2px rgba(78, 78, 78, 0.24);
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
 nav {
   margin-right: 5px;
   min-width: 300px;
@@ -83,6 +89,7 @@ h4 {
   border: 1px solid rgb(185, 184, 184);
   border-radius: 10px;
   padding: 9px;
+  position: relative;
 }
 
 .logo > * {
@@ -91,6 +98,23 @@ h4 {
 
 .logo_under_text {
   font-size: 12px;
+}
+
+.logo:hover .animation {
+  animation: circle 1s infinite both;
+  right: -20%;
+}
+
+.animation {
+  background-color: black;
+  aspect-ratio: 1/1;
+  width: 40px;
+  position: absolute;
+  right: 0%;
+  top: 10%;
+  border-radius: 100px;
+  transform: rotate(0);
+  clip-path: ellipse(42% 9% at 52% 40%);
 }
 
 .inner_cont {
@@ -161,6 +185,12 @@ p::first-letter {
   border-radius: 60px;
 }
 
+.progress_bar:hover {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
 ._skill_cont:first-child .progress_bar {
   width: 100%;
 }
@@ -172,11 +202,19 @@ p::first-letter {
   width: 20%;
 }
 
+.hireme_btn {
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  padding: 5px 2px;
+}
+
 .project_container {
   min-width: 200px;
   min-height: 200px;
   margin: 20px 0;
   width: 0%;
+  padding: 10px;
 }
 
 .project_container:hover {
@@ -220,4 +258,15 @@ footer > nav {
   max-width: 200px;
   margin: auto;
   margin: 9px;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transition: 0.5s;
+    transform: rotate(360deg);
+  }
 }
