@@ -56,6 +56,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   justify-content: center;
   min-width: 250px;
   padding: 10px;
@@ -76,6 +77,12 @@ h1 {
 
 h3 {
   font-size: 12px;
+}
+
+h6 {
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 h4 {
@@ -205,11 +212,13 @@ p::first-letter {
 .hireme_btn {
   border-radius: 10px;
   background-color: black;
+  min-width: 200px;
   color: white;
   padding: 5px 2px;
 }
 
-.project_container {
+.project_container,
+.project_containers {
   min-width: 200px;
   min-height: 200px;
   margin: 20px 0;
@@ -243,13 +252,14 @@ p::first-letter {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 5px 0;
   line-height: 20px;
   letter-spacing: 2px;
 }
 
 .contact:hover,
-h1:hover {
+h1:hover,
+h6:hover {
   cursor: pointer;
   background-color: rgba(206, 202, 202, 0.315);
 }
@@ -258,6 +268,12 @@ footer > nav {
   max-width: 200px;
   margin: auto;
   margin: 9px;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 @keyframes circle {
